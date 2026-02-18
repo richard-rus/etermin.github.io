@@ -1,6 +1,5 @@
 function showPage(pageId) {
     const pages = document.querySelectorAll('.page');
-
     pages.forEach(page => {
         page.classList.remove('active');
     });
@@ -8,7 +7,5 @@ function showPage(pageId) {
     const selectedPage = document.getElementById(pageId);
     if (selectedPage) {
         selectedPage.classList.add('active');
-    } else {
-        console.error(`Page with ID "${pageId}" not found.`);
     }
 }
