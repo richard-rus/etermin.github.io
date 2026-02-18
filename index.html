@@ -1,63 +1,130 @@
 <!DOCTYPE html>
-<html lang="sk">
+<html lang="sk" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Názov Projektu</title>
+    <title>eTermín - Budúcnosť lekárstva</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <header>
-    <h1>Názov Projektu</h1>
+    <div class="header-content">
+        <h1>eTermín</h1>
+        <p class="tagline">Automatizácia. Jednoduchosť. Budúcnosť lekárstva.</p>
+    </div>
 </header>
 
 <nav>
-    <button class="nav-btn" onclick="showPage('oprojekte')">O projekte</button>
-    <button class="nav-btn" onclick="showPage('clenovia')">Členovia</button>
-    <button class="nav-btn" onclick="showPage('zadania')">Zadania</button>
+    <button class="nav-btn active-nav" onclick="showPage('oprojekte', this)">O projekte</button>
+    <button class="nav-btn" onclick="showPage('clenovia', this)">Tím</button>
+    <button class="nav-btn" onclick="showPage('zadania', this)">Zadania</button>
 </nav>
 
 <main class="content-wrapper">
     <div id="oprojekte" class="page active">
-        <h2>O projekte</h2>
+        <h2>Revolúcia v objednávaní</h2>
         <div class="divider"></div>
-        <p>Tu napíšte informácie o vašom projekte. Tento text sa teraz zobrazuje v čistom, modernom okne.</p>
+        <p class="intro-text">
+            Zabudnite na obsadené linky a preplnené čakárne.
+            <strong>eTermín</strong> prináša inteligentnú automatizáciu do kalendárov lekárov
+            a dáva pacientom slobodu objednať sa kedykoľvek.
+        </p>
+
+        <div class="features-grid">
+            <div class="feature-box">
+                <div class="feature-icon">⚡</div>
+                <h3>Rýchlosť</h3>
+                <p>Objednanie termínu na 3 kliknutia. Žiadne volanie, žiadne čakanie.</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">📅</div>
+                <h3>Smart Kalendár</h3>
+                <p>Plne automatizovaná správa času lekára bez administratívnej záťaže.</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">🛡️</div>
+                <h3>Bezpečnosť</h3>
+                <p>Vaše zdravotné dáta sú chránené najmodernejším šifrovaním.</p>
+            </div>
+        </div>
     </div>
 
     <div id="clenovia" class="page">
-        <h2>Členovia</h2>
+        <h2>Náš tím</h2>
         <div class="divider"></div>
-        <p>Zoznam členov vášho tímu.</p>
+        <p class="section-desc">Študenti UPJŠ tvoriaci budúcnosť digitálneho zdravotníctva.</p>
+
+        <div class="members-grid">
+            <div class="member-card">
+                <div class="member-avatar">DK</div>
+                <div class="member-info">
+                    <p class="member-name">Damián Kaszycki</p>
+                    <a href="mailto:damian.kaszycki@student.upjs.sk" class="member-email">damian.kaszycki@student.upjs.sk</a>
+                </div>
+            </div>
+
+            <div class="member-card">
+                <div class="member-avatar">RR</div>
+                <div class="member-info">
+                    <p class="member-name">Richard Rúš</p>
+                    <a href="mailto:richard.rus@student.upjs.sk" class="member-email">richard.rus@student.upjs.sk</a>
+                </div>
+            </div>
+
+            <div class="member-card">
+                <div class="member-avatar">ĽK</div>
+                <div class="member-info">
+                    <p class="member-name">Ľudmila Koperdáková</p>
+                    <a href="mailto:ludmila.koperdakova@student.upjs.sk" class="member-email">ludmila.koperdakova@student.upjs.sk</a>
+                </div>
+            </div>
+
+            <div class="member-card">
+                <div class="member-avatar">SB</div>
+                <div class="member-info">
+                    <p class="member-name">Samuel Budinský</p>
+                    <a href="mailto:samuel.budinsky@student.upjs.sk" class="member-email">samuel.budinsky@student.upjs.sk</a>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div id="zadania" class="page">
-        <h2>Zadania</h2>
+        <h2>Postup vývoja</h2>
         <div class="divider"></div>
 
         <div class="weeks-grid">
             <div class="week-card">
-                <div class="week-number">Týždeň 1</div>
+                <div class="week-header">
+                    <span class="week-title">Týždeň 1</span>
+                    <span class="week-status">Dokončené</span>
+                </div>
                 <ul class="task-list">
                     <li>
-                        <strong>Anotácie projektu:</strong>
-                        <a href="dokumenty/1.tyzden/MIS_01_MD.pdf" target="_blank">PDF</a> |
-                        <a href="dokumenty/1.tyzden/MIS_01_MD.docx" download>DOCX</a>
+                        <span>📄 Anotácie:</span>
+                        <div class="links">
+                            <a href="dokumenty/1.tyzden/MIS_01_MD.pdf" target="_blank">PDF</a>
+                            <a href="dokumenty/1.tyzden/MIS_01_MD.docx" download>DOCX</a>
+                        </div>
                     </li>
                     <li>
-                        <strong>QA Anotácie:</strong>
-                        <a href="dokumenty/1.tyzden/QA_1.pdf" target="_blank">PDF</a> |
-                        <a href="dokumenty/1.tyzden/QA_1.docx" download>DOCX</a>
+                        <span>❓ QA Anotácie:</span>
+                        <div class="links">
+                            <a href="dokumenty/1.tyzden/QA_1.pdf" target="_blank">PDF</a>
+                            <a href="dokumenty/1.tyzden/QA_1.docx" download>DOCX</a>
+                        </div>
                     </li>
                     <li>
-                        <strong>Prezentácia:</strong>
-                        <a href="dokumenty/1.tyzden/mis_prez_1.pdf" target="_blank">PDF</a> |
-                        <a href="dokumenty/1.tyzden/mis_prez_1.pptx" download>PPTX</a>
+                        <span>📊 Prezentácia:</span>
+                        <div class="links">
+                            <a href="dokumenty/1.tyzden/mis_prez_1.pdf" target="_blank">PDF</a>
+                            <a href="dokumenty/1.tyzden/mis_prez_1.pptx" download>PPTX</a>
+                        </div>
                     </li>
                 </ul>
             </div>
-
         </div>
     </div>
 </main>
