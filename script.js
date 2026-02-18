@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     btn?.addEventListener('click', () => {
         const isDark = html.getAttribute('data-theme') === 'dark';
         html.setAttribute('data-theme', isDark ? 'light' : 'dark');
-        btn.textContent = isDark ? 'Tmavý mód' : 'Svetlý mód';
+        btn.textContent = isDark ? '🌙' : '☀️';
     });
 });
 
