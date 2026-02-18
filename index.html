@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Názov Projektu</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -13,23 +14,30 @@
 </header>
 
 <nav>
-    <button onclick="showPage('oprojekte')">O projekte</button>
-    <button onclick="showPage('clenovia')">Členovia</button>
-    <button onclick="showPage('zadania')">Zadania</button>
+    <button class="nav-btn" onclick="showPage('oprojekte')">O projekte</button>
+    <button class="nav-btn" onclick="showPage('clenovia')">Členovia</button>
+    <button class="nav-btn" onclick="showPage('zadania')">Zadania</button>
 </nav>
 
-<div id="oprojekte" class="page active">
-    <h2>O projekte</h2>
-    <p>Text projektu...</p>
-</div>
+<main class="content-wrapper">
+    <div id="oprojekte" class="page active">
+        <h2>O projekte</h2>
+        <div class="divider"></div>
+        <p>Tu napíšte informácie o vašom projekte. Tento text sa teraz zobrazuje v čistom, modernom okne.</p>
+    </div>
 
-<div id="clenovia" class="page">
-    <h2>Členovia</h2>
-</div>
+    <div id="clenovia" class="page">
+        <h2>Členovia</h2>
+        <div class="divider"></div>
+        <p>Zoznam členov vášho tímu.</p>
+    </div>
 
-<div id="zadania" class="page">
-    <h2>Zadania</h2>
-</div>
+    <div id="zadania" class="page">
+        <h2>Zadania</h2>
+        <div class="divider"></div>
+        <p>Prehľad vypracovaných úloh.</p>
+    </div>
+</main>
 
 <script src="script.js"></script>
 </body>
