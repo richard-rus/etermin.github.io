@@ -1,24 +1,14 @@
-body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #1b5e20, #66bb6a);
-}
+function showPage(pageId) {
+    const pages = document.querySelectorAll('.page');
 
-header {
-    text-align: center;
-    padding: 40px;
-    color: white;
-}
+    pages.forEach(page => {
+        page.classList.remove('active');
+    });
 
-.page {
-    display: none;
-    background: white;
-    padding: 40px;
-    max-width: 1000px;
-    margin: auto;
-    border-radius: 15px;
-}
-
-.active {
-    display: block;
+    const selectedPage = document.getElementById(pageId);
+    if (selectedPage) {
+        selectedPage.classList.add('active');
+    } else {
+        console.error(`Page with ID "${pageId}" not found.`);
+    }
 }
